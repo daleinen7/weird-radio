@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
+import '../scss/style.scss'
 
 // markup
 const IndexPage = () => {
