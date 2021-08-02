@@ -2,7 +2,7 @@ footer {
   padding: 20px 10%;
   background: $dark-gray;
   height: 420px;
-  color: white;
+  color: $light-gray;
   display: flex;
 
   h2 {
@@ -35,7 +35,7 @@ footer {
     ul {
       display: flex;
       li {
-        margin-right: 14px;
+        margin-right: 40px;
       }
     }
   }
