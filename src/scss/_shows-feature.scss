@@ -25,10 +25,10 @@
   .show-card {
     background: $haze;
     color: $black;
+    padding: 50px;
   }
   .show-card-img {
-    padding: 50px;
-    border: 0px solid $haze;
+    border: 0 solid red;
     border-radius: 23px;
   }
 }
