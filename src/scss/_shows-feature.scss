@@ -26,9 +26,36 @@
     background: $haze;
     color: $black;
     padding: 50px;
+
+    h3 {
+      font-size: 2.375rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: $black;
+      text-transform: uppercase;
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+
+    p.dj {
+      font-weight: 700;
+    }
   }
   .show-card-img {
-    border: 0 solid red;
+    border: 0 solid $haze;
     border-radius: 23px;
+  }
+  .content-container {
+    position: relative;
+  }
+  .info {
+    position: absolute;
+    bottom: 0;
+    padding: 2.5rem;
+    background: transparentize($haze, 0.5);
+    min-height: 35%;
+    width: 100%;
   }
 }

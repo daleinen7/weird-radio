@@ -6,8 +6,18 @@ export default function ShowCard({ show }) {
   const image = getImage(show.image)
   return (
     <li className="show-card">
-      <GatsbyImage image={image} alt={show.name} imgClassName="show-card-img" />
-      <h3>{show.name}</h3>
+      <div className="content-container">
+        <GatsbyImage
+          image={image}
+          alt={show.name}
+          imgClassName="show-card-img"
+        />
+        <div className="info">
+          <h3>{show.name}</h3>
+          <p>DAILY @ 6PM</p>
+          <p className="dj">DJ NELSON</p>
+        </div>
+      </div>
     </li>
   )
 }
