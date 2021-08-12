@@ -11,7 +11,7 @@ export default function RadioShow() {
             nodes {
               name
               image {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(placeholder: BLURRED, width: 400)
               }
             }
           }

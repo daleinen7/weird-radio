@@ -25,7 +25,7 @@ export const query = graphql`
           raw
         }
         image {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, width: 296)
         }
       }
     }

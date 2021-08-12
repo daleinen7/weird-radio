@@ -5,12 +5,12 @@ export default function ShowSquare({ show }) {
   console.log(show.image)
   const image = getImage(show.image)
   return (
-    <li className="show-card">
+    <li className="show-square">
       <div className="content-container">
         <GatsbyImage
           image={image}
           alt={show.name}
-          imgClassName="show-card-img"
+          imgClassName="show-square-img"
         />
         <div className="info">
           <h3>{show.name}</h3>
