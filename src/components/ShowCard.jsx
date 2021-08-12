@@ -11,8 +11,12 @@ export default function ShowCard({ show }) {
         style={{ position: 'relative', right: 24, bottom: 24 }}
         imgClassName="show-card-img"
       />
-      <div className="title">
-        <h3>{show.name}</h3>
+      <div className="show-card-info">
+        <div className="title">
+          <h3>{show.name}</h3>
+        </div>
+        <p className="time">{show.dayAndTime}</p>
+        <p className="dj">{show.hostName}</p>
       </div>
     </div>
   )

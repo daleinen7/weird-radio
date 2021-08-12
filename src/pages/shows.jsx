@@ -21,11 +21,10 @@ export const query = graphql`
     allContentfulRadioShow {
       nodes {
         name
-        showDescription {
-          raw
-        }
+        dayAndTime
+        hostName
         image {
-          gatsbyImageData(placeholder: BLURRED, width: 296)
+          gatsbyImageData(placeholder: BLURRED, width: 282, height: 282)
         }
       }
     }
