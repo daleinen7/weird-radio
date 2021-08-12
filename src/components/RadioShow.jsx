@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import ShowCard from './ShowCard'
+import ShowSquare from './ShowSquare'
 
 export default function RadioShow() {
   return (
@@ -26,7 +26,7 @@ export default function RadioShow() {
           <p role="doc-subtitle">Your daily dose of weird</p>
           <ul>
             {data.allContentfulRadioShow.nodes.map((show, idx) => {
-              return <ShowCard show={show} key={idx} />
+              return <ShowSquare show={show} key={idx} />
             })}
           </ul>
         </section>
