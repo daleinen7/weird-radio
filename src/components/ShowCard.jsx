@@ -2,22 +2,22 @@ import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 export default function ShowCard({ show }) {
-  console.log(show.image)
   const image = getImage(show.image)
   return (
-    <li className="show-card">
-      <div className="content-container">
-        <GatsbyImage
-          image={image}
-          alt={show.name}
-          imgClassName="show-card-img"
-        />
-        <div className="info">
+    <div className="show-card">
+      <GatsbyImage
+        image={image}
+        alt={show.name}
+        style={{ position: 'relative', right: 24, bottom: 24 }}
+        imgClassName="show-card-img"
+      />
+      <div className="show-card-info">
+        <div className="title">
           <h3>{show.name}</h3>
-          <p>DAILY @ 6PM</p>
-          <p className="dj">DJ NELSON</p>
         </div>
+        <p className="time">{show.dayAndTime}</p>
+        <p className="dj">{show.hostName}</p>
       </div>
-    </li>
+    </div>
   )
 }

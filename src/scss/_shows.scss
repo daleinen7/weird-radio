@@ -1,0 +1,33 @@
+.show-card {
+  display: flex;
+  width: 700px;
+  height: 296px;
+  background: $pale-purple;
+  margin: 4rem auto;
+}
+
+.show-card-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .time {
+    margin-bottom: 50px;
+  }
+  .dj {
+    font-weight: 800;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $clear-purp;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin: 50px -100px 40px -24px;
+  width: 466px;
+  height: 100px;
+  font-size: 2rem;
+}
