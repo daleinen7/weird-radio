@@ -1,0 +1,61 @@
+.player {
+  position: fixed;
+  right: 10%;
+  width: 414px;
+  height: 250px;
+
+  .info {
+    height: 168px;
+    background-color: $charcoal;
+    display: flex;
+    position: relative;
+  }
+
+  .current-image {
+    height: 105px;
+    width: 105px;
+    margin: 25px 16px 37px 25px;
+    background: $dark-gray;
+  }
+
+  .text {
+    margin: 25px 5px 37px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .now-playing {
+    font-size: 0.75rem;
+    color: $light-gray;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  .weird-live {
+    font-size: 0.75rem;
+    color: $light-gray;
+    font-weight: 400;
+  }
+
+  .song {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .artist {
+    color: $light-gray;
+    font-weight: 400;
+    font-size: 0.8125;
+    text-transform: uppercase;
+  }
+
+  .controls {
+    height: 82px;
+    background-color: $gray;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
