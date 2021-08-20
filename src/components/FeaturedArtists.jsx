@@ -11,7 +11,7 @@ export default function FeaturedArtists({ data }) {
             nodes {
               name
               image {
-                gatsbyImageData(width: 200)
+                gatsbyImageData(width: 258)
               }
             }
           }
