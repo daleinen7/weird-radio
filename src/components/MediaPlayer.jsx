@@ -15,6 +15,8 @@ export default function MediaPlayer() {
     } else {
       audio.play()
     }
+
+    setRadio(!isPlaying)
   }
 
   return (
