@@ -3,6 +3,7 @@
   right: 10%;
   width: 414px;
   height: 250px;
+  z-index: 5;
 
   .info {
     height: 168px;
@@ -11,7 +12,7 @@
     position: relative;
   }
 
-  .current-image {
+  .radioco_artwork {
     height: 105px;
     width: 105px;
     margin: 25px 16px 37px 25px;
@@ -53,9 +54,19 @@
   }
 
   .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 82px;
     background-color: $gray;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }

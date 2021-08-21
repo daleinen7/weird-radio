@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import play from '../images/play.svg'
 
 export default function MediaPlayer() {
   const [radio, setRadio] = useState(false)
-  const [audio, setAudio] = useState(
-    new Audio('https://s3.radio.co/sa333a8356/listen')
-  )
+  const [audio] = useState(new Audio('https://s3.radio.co/sa333a8356/listen'))
 
   const audioControls = () => {
     let isPlaying = radio
@@ -21,8 +19,9 @@ export default function MediaPlayer() {
 
   return (
     <div className="player">
+      <script src="https://embed.radio.co/embed/sa333a8356/artwork.js"></script>
       <div className="info">
-        <img src="" alt="" className="current-image" />
+        <div className="radioco_artwork"></div>
         <div className="text">
           <div>
             <div className="now-playing">Now Playing</div>
@@ -35,12 +34,6 @@ export default function MediaPlayer() {
         </div>
       </div>
       <div className="controls">
-        <audio src="https://s3.radio.co/sa333a8356/listen" type="audio/mpeg">
-          {' '}
-          I'm sorry. You're browser doesn't support HTML5 <code>
-            audio
-          </code>.{' '}
-        </audio>
         <button onClick={audioControls}>
           <img src={play} alt="Play" />
         </button>
