@@ -12,7 +12,7 @@
     position: relative;
   }
 
-  .radioco_artwork {
+  #radioco_artwork img {
     height: 105px;
     width: 105px;
     margin: 25px 16px 37px 25px;
@@ -39,10 +39,11 @@
     font-weight: 400;
   }
 
-  .song {
-    font-size: 1.25rem;
-    margin-bottom: 5px;
-    color: white;
+  #radioco_song {
+    font-size: 0.75rem;
+    color: $light-gray;
+    // margin-bottom: 5px;
+    color: rgb(187, 187, 187);
     font-weight: 700;
   }
 
