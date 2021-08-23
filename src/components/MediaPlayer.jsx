@@ -11,8 +11,10 @@ const appendScript = (srcURL, selector) => {
 
 export default function MediaPlayer() {
   const [radio, setRadio] = useState(false)
-  const [audio] = useState(new Audio('https://s3.radio.co/sa333a8356/listen'))
-
+  const [audio] = useState(
+    typeof Audio !== 'undefined' &&
+      new Audio('https://s3.radio.co/sa333a8356/listen')
+  )
   const audioControls = () => {
     radio ? audio.pause() : audio.play()
     setRadio(!radio)
