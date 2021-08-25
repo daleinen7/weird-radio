@@ -23,9 +23,9 @@ export default function FeaturedArtists({ data }) {
           <p role="doc-subtitle">Sonic munchies for your soundholes</p>
 
           <ul>
-            {data.allContentfulArtist.nodes.map((artist) => {
+            {data.allContentfulArtist.nodes.map((artist, idx) => {
               return (
-                <li>
+                <li key={idx}>
                   <GatsbyImage
                     image={getImage(artist.image)}
                     alt={artist.name}

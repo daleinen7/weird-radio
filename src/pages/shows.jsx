@@ -9,8 +9,8 @@ export default function shows({ data }) {
       <h2>Weird Radio Shows</h2>
       <p role="doc-subtitle">Your daily dose of weird</p>
 
-      {data.allContentfulRadioShow.nodes.map((show) => (
-        <ShowCard show={show} />
+      {data.allContentfulRadioShow.nodes.map((show, idx) => (
+        <ShowCard show={show} key={idx} />
       ))}
     </Layout>
   )

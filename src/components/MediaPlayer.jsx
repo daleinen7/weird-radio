@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import play from '../images/play.svg'
 
 const appendScript = (srcURL, selector) => {
@@ -6,7 +6,6 @@ const appendScript = (srcURL, selector) => {
   script.src = srcURL
   script.async = true
   document.querySelector(selector).appendChild(script)
-  console.log('This fucking script', script)
 }
 
 export default function MediaPlayer() {
@@ -15,14 +14,51 @@ export default function MediaPlayer() {
     typeof Audio !== 'undefined' &&
       new Audio('https://s3.radio.co/sa333a8356/listen')
   )
+
+  let embedDiv
+  let songInfo
+  let artistInfo
+  let info
+
   const audioControls = () => {
     radio ? audio.pause() : audio.play()
     setRadio(!radio)
   }
 
+  const appendScriptAndSplit = (srcURL, selector) => {
+    const script = document.createElement('script')
+    script.src = srcURL
+    script.async = true
+    const parentDiv = document.querySelector(selector)
+    parentDiv.appendChild(script)
+
+    setTimeout(() => {
+      embedDiv = document.querySelector('.radioco_song')
+      songInfo = document.createElement('div')
+      artistInfo = document.createElement('div')
+      info = embedDiv.innerText.split(' - ')
+      songInfo.innerText = info[1]
+      songInfo.classList.add('song')
+      artistInfo.innerText = info[0]
+      artistInfo.classList.add('artist')
+      parentDiv.appendChild(songInfo)
+      parentDiv.appendChild(artistInfo)
+      embedDiv.setAttribute('hidden', 'true')
+      const callback = function () {
+        info = embedDiv.innerText.split(' - ')
+        songInfo.innerText = info[1]
+        artistInfo.innerText = info[0]
+      }
+
+      const observer = new MutationObserver(callback)
+
+      observer.observe(embedDiv, { childList: true })
+    }, 400)
+  }
+
   useEffect(() => {
     // song info
-    appendScript(
+    appendScriptAndSplit(
       'https://embed.radio.co/embed/sa333a8356/song.js',
       '#radioco_song'
     )
