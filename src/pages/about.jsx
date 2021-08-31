@@ -1,9 +1,11 @@
 import React from 'react'
+import DJCard from '../components/DJCard'
 import Support from '../components/Support'
 import Footer from '../components/Footer'
+import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-export default function AboutPage() {
+export default function AboutPage({ data }) {
   return (
     <>
       <section className="about">
@@ -44,9 +46,25 @@ export default function AboutPage() {
       <section className="discover">
         <h2>Discover Our DJs</h2>
         <p role="doc-subtitle">Sonic Munchies for Your Soundholes</p>
+        {data.allContentfulStaff.nodes.map((dj) => {
+          return <DJCard name={dj.name} image={dj.image} key={dj.name} />
+        })}
       </section>
       <Support />
       <Footer />
     </>
   )
 }
+
+export const query = graphql`
+  query DJs {
+    allContentfulStaff {
+      nodes {
+        image {
+          gatsbyImageData(width: 410, height: 317, placeholder: BLURRED)
+        }
+        name
+      }
+    }
+  }
+`
