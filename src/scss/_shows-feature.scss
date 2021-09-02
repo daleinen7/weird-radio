@@ -23,10 +23,12 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .show-square {
     background: $haze;
     color: $black;
+    margin: 2rem;
     padding: 50px;
 
     h3 {
