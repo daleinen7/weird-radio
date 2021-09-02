@@ -46,9 +46,15 @@ export default function AboutPage({ data }) {
       <section className="discover">
         <h2>Discover Our DJs</h2>
         <p role="doc-subtitle">Sonic Munchies for Your Soundholes</p>
-        {data.allContentfulStaff.nodes.map((dj) => {
-          return <DJCard name={dj.name} image={dj.image} key={dj.name} />
-        })}
+        <ul className="discover-djs">
+          {data.allContentfulStaff.nodes.map((dj) => {
+            return (
+              <li>
+                <DJCard name={dj.name} image={dj.image} key={dj.name} />
+              </li>
+            )
+          })}
+        </ul>
       </section>
       <Support />
       <Footer />

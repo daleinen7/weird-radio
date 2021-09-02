@@ -1,0 +1,28 @@
+.support {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 117px;
+  h2 {
+    font-size: 2.125rem;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 10rem;
+    border-radius: 50px;
+    background-color: $purple;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 500px;
+    text-transform: uppercase;
+  }
+}
