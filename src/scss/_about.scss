@@ -1,7 +1,12 @@
 .about {
   display: flex;
+  justify-content: center;
   background-color: black;
   color: white;
+
+  .copy {
+    width: 50%;
+  }
 
   h2 {
     font-weight: 700;
@@ -35,4 +40,9 @@
     font-size: 1.25rem;
     margin-bottom: 3.75rem;
   }
+}
+
+.discover-djs {
+  display: flex;
+  flex-wrap: wrap;
 }
