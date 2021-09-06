@@ -1,8 +1,9 @@
 .player {
   position: fixed;
+  top: 0;
   right: 10%;
-  width: 414px;
-  height: 250px;
+  width: 20rem;
+  height: 10rem;
   z-index: 5;
 
   .info {
