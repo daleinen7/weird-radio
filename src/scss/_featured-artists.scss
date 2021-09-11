@@ -21,3 +21,12 @@
 .featured-artist-img {
   border-radius: 50%;
 }
+
+div.featured-artists {
+  margin: 4px, 4px; 
+  padding: 4px; 
+  background-color: #08c708; 
+  width: 300px; 
+  overflow: auto; 
+  white-space: nowrap; 
+}
