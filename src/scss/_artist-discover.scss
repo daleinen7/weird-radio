@@ -1,6 +1,9 @@
 ul.artist-discover {
-  margin: 0 10%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+main.artist-discover {
+  padding: 100px 10%;
 }

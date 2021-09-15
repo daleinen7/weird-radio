@@ -8,9 +8,11 @@ import '../scss/style.scss'
 const IndexPage = () => {
   return (
     <Layout>
-      <FeaturedArtists />
-      <RadioShow />
-      <Support />
+      <main>
+        <FeaturedArtists />
+        <RadioShow />
+        <Support />
+      </main>
     </Layout>
   )
 }
