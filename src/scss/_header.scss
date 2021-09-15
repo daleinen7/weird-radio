@@ -36,12 +36,12 @@ header#main {
     a {
       padding: 4px;
       &:hover {
-        border-bottom: 1px solid $purple;
+        border-bottom: 3px solid darken($purple, 17%);
       }
     }
   }
 
   .active {
-    border-bottom: 3px solid $purple !important;
+    border-bottom: 3px solid $purple;
   }
 }

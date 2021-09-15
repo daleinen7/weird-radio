@@ -1,0 +1,12 @@
+li.artist-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-weight: 700;
+  }
+}
+.artist-img {
+  border-radius: 50%;
+  margin: 1.1rem;
+}

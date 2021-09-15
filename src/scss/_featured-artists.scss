@@ -6,18 +6,4 @@
     display: flex;
     margin: 2rem auto;
   }
-
-  li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-      font-weight: 700;
-    }
-  }
-}
-
-.featured-artist-img {
-  border-radius: 50%;
-  margin: 1.1rem;
 }
