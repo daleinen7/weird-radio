@@ -33,5 +33,15 @@ header#main {
   }
   ul li:not(:first-child) {
     margin-bottom: 24px;
+    a {
+      padding: 4px;
+      &:hover {
+        border-bottom: 1px solid $purple;
+      }
+    }
+  }
+
+  .active {
+    border-bottom: 3px solid $purple !important;
   }
 }

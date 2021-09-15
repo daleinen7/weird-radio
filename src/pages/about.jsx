@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/Layout'
 import DJCard from '../components/DJCard'
 import Support from '../components/Support'
 import Footer from '../components/Footer'
@@ -7,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 export default function AboutPage({ data }) {
   return (
-    <>
+    <Layout>
       <section className="about">
         <div className="copy">
           <h2>About Us</h2>
@@ -58,7 +59,7 @@ export default function AboutPage({ data }) {
       </section>
       <Support />
       <Footer />
-    </>
+    </Layout>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../images/Logo.png'
 import MediaPlayer from './MediaPlayer'
+import { Link } from 'gatsby'
 
 export default function Header() {
   return (
@@ -15,13 +16,19 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="/artists">Artists</a>
+              <Link to="/artists" activeClassName="active">
+                Artists
+              </Link>
             </li>
             <li>
-              <a href="/shows">Radio Shows</a>
+              <Link to="/shows" activeClassName="active">
+                Radio Shows
+              </Link>
             </li>
             <li>
-              <a href="/about">About Us</a>
+              <Link to="/about" activeClassName="active">
+                About Us
+              </Link>
             </li>
           </ul>
         </nav>
