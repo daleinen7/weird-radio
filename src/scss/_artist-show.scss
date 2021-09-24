@@ -1,0 +1,45 @@
+section#artist {
+  display: flex;
+  background: $black;
+  color: $white;
+
+  .artist-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    p {
+      font-weight: 600;
+      font-size: 1.125rem;
+      max-width: 460px;
+    }
+  }
+
+  img {
+    max-height: 600px;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  p[role='doc-subtitle']{
+    font-weight: 700;
+    font-size: 2.375rem;
+  }
+  .divider {
+    background: gray;
+    height: 4px;
+    width: 300px;
+    margin: 10px 0;
+  }
+
+}
