@@ -6,7 +6,7 @@ import slugify from 'slugify'
 export default function ArtistCircle({ artist }) {
   return (
     <li className="artist-circle">
-      <Link to={slugify(artist.name)}>
+      <Link to={`/${slugify(artist.name, {lower: true}).replace("'", "-")}`}>
         <GatsbyImage
           image={getImage(artist.image)}
           alt={artist.name}
