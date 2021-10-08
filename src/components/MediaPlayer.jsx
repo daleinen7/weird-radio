@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 import play from '../images/play.svg'
 import pause from '../images/pause.svg'
+import volume from '../images/volume.svg'
+import volumeEmpty from '../images/volumeEmpty.svg'
+import volumeFill from '../images/volumeFill.svg'
 
 const appendScript = (srcURL, selector) => {
   const script = document.createElement('script')
@@ -11,6 +14,7 @@ const appendScript = (srcURL, selector) => {
 
 export default function MediaPlayer() {
   const [radio, setRadio] = useState(false)
+  const [volume, setVolume] = useState(6)
   const [audio] = useState(
     typeof Audio !== 'undefined' &&
       new Audio('https://s3.radio.co/sa333a8356/listen')
@@ -57,6 +61,14 @@ export default function MediaPlayer() {
     }, 400)
   }
 
+  const changeVolume = (e) => {
+    setVolume(e.target.value)
+  }
+
+  useEffect(() => {
+    audio.volume = volume * 0.1
+  }, [volume])
+
   useEffect(() => {
     // song info
     appendScriptAndSplit(
@@ -89,6 +101,16 @@ export default function MediaPlayer() {
         <button onClick={audioControls}>
           <img src={radio ? pause : play} alt="Play" />
         </button>
+        <label htmlFor="volume">volume</label>
+        <input
+          type="range"
+          name="volume"
+          id="volume"
+          min="0"
+          max="10"
+          onChange={changeVolume}
+          value={volume}
+        />
       </div>
     </div>
   )
