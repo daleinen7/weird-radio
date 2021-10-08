@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import play from '../images/play.svg'
+import pause from '../images/pause.svg'
 
 const appendScript = (srcURL, selector) => {
   const script = document.createElement('script')
@@ -86,7 +87,7 @@ export default function MediaPlayer() {
       </div>
       <div className="controls">
         <button onClick={audioControls}>
-          <img src={play} alt="Play" />
+          <img src={radio ? pause : play} alt="Play" />
         </button>
       </div>
     </div>
