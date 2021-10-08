@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import play from '../images/play.svg'
 import pause from '../images/pause.svg'
-import volume from '../images/volume.svg'
+import volumeSymbol from '../images/volume.svg'
 import volumeEmpty from '../images/volumeEmpty.svg'
 import volumeFill from '../images/volumeFill.svg'
 
@@ -101,16 +101,21 @@ export default function MediaPlayer() {
         <button onClick={audioControls}>
           <img src={radio ? pause : play} alt="Play" />
         </button>
-        <label htmlFor="volume">volume</label>
-        <input
-          type="range"
-          name="volume"
-          id="volume"
-          min="0"
-          max="10"
-          onChange={changeVolume}
-          value={volume}
-        />
+        <div className="volumeControl">
+          <label htmlFor="volume">
+            <img src={volumeSymbol} alt="" />
+          </label>
+          <input
+            className="styled-slider slider-progress"
+            type="range"
+            name="volume"
+            id="volume"
+            min="0"
+            max="10"
+            onChange={changeVolume}
+            value={volume}
+          />
+        </div>
       </div>
     </div>
   )
