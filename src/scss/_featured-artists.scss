@@ -5,5 +5,12 @@
   ul {
     display: flex;
     margin: 2rem auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    li {
+      min-width: 300px;
+      min-height: 300px;
+    }
   }
 }
