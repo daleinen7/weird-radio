@@ -1,12 +1,24 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 export default function Staff({ data }) {
+  const staff = data.contentfulStaff
   return (
     <Layout>
-      <h1>Staff page</h1>
-      <h2>{data.contentfulStaff.name}</h2>
+      <section id="artist">
+        <GatsbyImage image={getImage(staff.image)} alt={staff.name} />
+        <div className="artist-info">
+          <header>
+            <h1>{staff.name}</h1>
+            <div className="divider"></div>
+            <p role="doc-subtitle">{staff.role}</p>
+          </header>
+          <p>{renderRichText(staff.bio)}</p>
+        </div>
+      </section>
     </Layout>
   )
 }
