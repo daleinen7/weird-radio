@@ -1,9 +1,20 @@
+.show-list {
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
 .show-card {
   display: flex;
   width: 700px;
   height: 296px;
   background: $pale-purple;
   margin: 4rem auto;
+
+  &:hover {
+    background: darken($pale-purple, 4%);
+  }
 }
 
 .show-card-info {
@@ -30,4 +41,12 @@
   width: 466px;
   height: 100px;
   font-size: 2rem;
+}
+
+.about-radio-show {
+  display: flex;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.47)
+  );
 }
