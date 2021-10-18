@@ -1,4 +1,5 @@
 import React from 'react'
+import ExploreArtists from '../components/ExploreArtists'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -16,9 +17,10 @@ export default function Artist({ data }) {
             <div className="divider"></div>
             <p role="doc-subtitle">Artist</p>
           </header>
-          <p>{renderRichText(artist.bio)}</p>
+          {renderRichText(artist.bio)}
         </div>
       </section>
+      <ExploreArtists />
     </Layout>
   )
 }
