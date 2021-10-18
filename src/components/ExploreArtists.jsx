@@ -6,6 +6,11 @@ import { StaticQuery, graphql } from 'gatsby'
 
 export default function ExploreArtists() {
   const [page, setPage] = useState(0)
+
+  const changePage = (direction) => {
+    setPage(page + direction)
+  }
+
   return (
     <StaticQuery
       query={graphql`
@@ -24,7 +29,7 @@ export default function ExploreArtists() {
         <section className="explore">
           <h2>Explore Artists</h2>
           <ul>
-            <button>
+            <button onClick={() => changePage(1)}>
               <img src={leftArrow} alt="more artists left" />
             </button>
             {data.allContentfulArtist.nodes
@@ -32,7 +37,7 @@ export default function ExploreArtists() {
               .map((artist, idx) => {
                 return <ArtistCircle artist={artist} key={idx} />
               })}
-            <button>
+            <button onClick={() => changePage(-1)}>
               <img src={rightArrow} alt="more artists right" />
             </button>
           </ul>
