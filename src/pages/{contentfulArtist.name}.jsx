@@ -1,4 +1,5 @@
 import React from 'react'
+import ExploreArtists from '../components/ExploreArtists'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -19,6 +20,7 @@ export default function Artist({ data }) {
           <p>{renderRichText(artist.bio)}</p>
         </div>
       </section>
+      <ExploreArtists />
     </Layout>
   )
 }

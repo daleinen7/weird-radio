@@ -1,0 +1,26 @@
+.explore {
+  background: $dark-gray;
+  padding: 2rem;
+
+  h2 {
+    color: white;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:hover img {
+      filter: invert(0.5) sepia(1) saturate(5) hue-rotate(220deg);
+    }
+    &:active img {
+      filter: invert(0.5) sepia(1) saturate(5) hue-rotate(260deg);
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+}
