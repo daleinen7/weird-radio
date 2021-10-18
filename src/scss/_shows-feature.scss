@@ -23,10 +23,18 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    li {
+      margin: 20px;
+    }
   }
   .show-square {
     background: $haze;
     color: $black;
+
     padding: 50px;
 
     h3 {

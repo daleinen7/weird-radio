@@ -1,6 +1,6 @@
 import React from 'react'
+import ArtistCircle from './ArtistCircle'
 import { StaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 export default function FeaturedArtists({ data }) {
   return (
@@ -11,7 +11,7 @@ export default function FeaturedArtists({ data }) {
             nodes {
               name
               image {
-                gatsbyImageData(width: 258)
+                gatsbyImageData(width: 300, height: 300)
               }
             }
           }
@@ -23,17 +23,8 @@ export default function FeaturedArtists({ data }) {
           <p role="doc-subtitle">Sonic munchies for your soundholes</p>
 
           <ul>
-            {data.allContentfulArtist.nodes.map((artist) => {
-              return (
-                <li>
-                  <GatsbyImage
-                    image={getImage(artist.image)}
-                    alt={artist.name}
-                    className="featured-artist-img"
-                  />
-                  <p>{artist.name}</p>
-                </li>
-              )
+            {data.allContentfulArtist.nodes.map((artist, idx) => {
+              return <ArtistCircle artist={artist} key={idx} />
             })}
           </ul>
         </section>

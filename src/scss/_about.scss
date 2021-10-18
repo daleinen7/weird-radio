@@ -1,0 +1,49 @@
+.about {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 100px 10%;
+
+  .copy {
+    width: 50%;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  p[role='doc-subtitle'] {
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .purp {
+    color: $purple;
+  }
+
+  .green {
+    color: $green;
+  }
+
+  .intro {
+    font-size: 2.5rem;
+    line-height: 2.8125rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 3.75rem;
+  }
+}
+
+.discover-djs {
+  display: flex;
+  flex-wrap: wrap;
+}
