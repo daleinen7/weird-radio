@@ -16,7 +16,7 @@ export default function Staff({ data }) {
             <div className="divider"></div>
             <p role="doc-subtitle">{staff.role}</p>
           </header>
-          <p>{renderRichText(staff.bio)}</p>
+          {renderRichText(staff.bio)}
         </div>
       </section>
     </Layout>

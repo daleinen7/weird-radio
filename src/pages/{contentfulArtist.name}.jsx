@@ -17,7 +17,7 @@ export default function Artist({ data }) {
             <div className="divider"></div>
             <p role="doc-subtitle">Artist</p>
           </header>
-          <p>{renderRichText(artist.bio)}</p>
+          {renderRichText(artist.bio)}
         </div>
       </section>
       <ExploreArtists />

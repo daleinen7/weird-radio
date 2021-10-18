@@ -29,7 +29,7 @@ export default function ExploreArtists() {
         <section className="explore">
           <h2>Explore Artists</h2>
           <ul>
-            <button onClick={() => changePage(1)}>
+            <button onClick={() => changePage(-1)}>
               <img src={leftArrow} alt="more artists left" />
             </button>
             {data.allContentfulArtist.nodes
@@ -37,7 +37,7 @@ export default function ExploreArtists() {
               .map((artist, idx) => {
                 return <ArtistCircle artist={artist} key={idx} />
               })}
-            <button onClick={() => changePage(-1)}>
+            <button onClick={() => changePage(1)}>
               <img src={rightArrow} alt="more artists right" />
             </button>
           </ul>
