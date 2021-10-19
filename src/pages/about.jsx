@@ -57,7 +57,7 @@ export default function AboutPage({ data }) {
         </section>
         <Support />
       </main>
-      <Footer />
+      
     </Layout>
   )
 }
