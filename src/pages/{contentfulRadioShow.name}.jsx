@@ -35,7 +35,7 @@ export const query = graphql`
   query ($name: String!) {
     contentfulRadioShow(name: { eq: $name }) {
       image {
-        gatsbyImageData
+        gatsbyImageData(width: 360)
         file {
           url
         }
