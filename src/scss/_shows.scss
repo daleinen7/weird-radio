@@ -43,10 +43,60 @@
   font-size: 2rem;
 }
 
+.radio-show {
+  overflow: hidden;
+  background-color: $dark-gray;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.show-page-background {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: -50vh;
+  filter: blur(20px);
+  transform: rotate(-9deg);
+  height: 300%;
+  width: 200vw;
+}
+
 .about-radio-show {
+  position: absolute;
+  top: 300px;
+  width: 80%;
   display: flex;
+  padding: 20px;
+  align-items: center;
   background: linear-gradient(
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.47)
   );
+
+  .show-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    color: black;
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+
+  .time-and-day {
+    text-transform: capitalize;
+  }
+
+  img {
+    min-width: 360px;
+    min-height: 360px;
+  }
 }
