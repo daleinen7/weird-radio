@@ -2,19 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 export default function RadioShow({ data }) {
   const show = data.contentfulRadioShow
   const image = getImage(show.image)
-  console.log(image)
+
+  const bgImage = {
+    backgroundImage: `url(${show.image.file.url})`,
+  }
   return (
     <Layout>
-      <div className="show-page-background">
-        <GatsbyImage
-          image={image}
-          alt={show.name}
-          style={{ position: 'absolute' }}
-        />
+      <section className="radio-show">
+        <div className="show-page-background" style={bgImage}></div>
         <div className="about-radio-show">
           <GatsbyImage
             image={image}
@@ -22,8 +22,11 @@ export default function RadioShow({ data }) {
             imgClassName="show-card-img"
           />
           <h2>{data.contentfulRadioShow.name}</h2>
+          <p>{show.dayAndTime}</p>
+          <p>{show.hostName}</p>
+          {renderRichText(show.showDescription)}
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }
@@ -32,7 +35,10 @@ export const query = graphql`
   query ($name: String!) {
     contentfulRadioShow(name: { eq: $name }) {
       image {
-        gatsbyImageData
+        gatsbyImageData(width: 360)
+        file {
+          url
+        }
       }
       name
       hostName
