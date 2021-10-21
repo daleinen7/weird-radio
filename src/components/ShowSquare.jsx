@@ -1,11 +1,13 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import slugify from 'slugify'
 
 export default function ShowSquare({ show }) {
   const image = getImage(show.image)
   return (
     <li className="show-square">
-      <div className="content-container">
+      <Link to={`/${slugify(show.name)}`} className="content-container">
         <GatsbyImage
           image={image}
           alt={show.name}
@@ -16,7 +18,7 @@ export default function ShowSquare({ show }) {
           <p>DAILY @ 6PM</p>
           <p className="dj">DJ NELSON</p>
         </div>
-      </div>
+      </Link>
     </li>
   )
 }
