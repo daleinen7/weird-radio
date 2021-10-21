@@ -62,10 +62,13 @@
   }
   .info {
     position: absolute;
-    bottom: 0;
+    bottom: -400px;
     padding: 2.5rem;
     background: transparentize($haze, 0.5);
     min-height: 35%;
     width: 100%;
+    h3 {
+      color: black;
+    }
   }
 }

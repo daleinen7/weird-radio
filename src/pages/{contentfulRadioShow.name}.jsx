@@ -16,15 +16,15 @@ export default function RadioShow({ data }) {
       <section className="radio-show">
         <div className="show-page-background" style={bgImage}></div>
         <div className="about-radio-show">
-          <GatsbyImage
-            image={image}
-            alt={show.name}
-            imgClassName="show-card-img"
-          />
-          <h2>{data.contentfulRadioShow.name}</h2>
-          <p>{show.dayAndTime}</p>
-          <p>{show.hostName}</p>
-          {renderRichText(show.showDescription)}
+          <div className="show-img-container">
+            <GatsbyImage image={image} alt={show.name} />
+          </div>
+          <div className="show-info">
+            <h2>{data.contentfulRadioShow.name}</h2>
+            <p>{show.dayAndTime}</p>
+            <p className="dj">{show.hostName}</p>
+            {renderRichText(show.showDescription)}
+          </div>
         </div>
       </section>
     </Layout>
