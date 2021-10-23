@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import ExploreShows from '../components/ExploreShows'
 
 export default function RadioShow({ data }) {
   const show = data.contentfulRadioShow
@@ -27,6 +28,7 @@ export default function RadioShow({ data }) {
           </div>
         </div>
       </section>
+      <ExploreShows />
     </Layout>
   )
 }
