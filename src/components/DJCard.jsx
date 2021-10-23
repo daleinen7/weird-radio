@@ -8,10 +8,14 @@ export default function DJCard({ image, name }) {
   const img = getImage(image)
   console.log(img)
   return (
-    <Link to={`/${slugify(name, { lower: true }).replace("'", '-')}`}>
-      <div className="dj-card">
-        <h2>{name}</h2>
-        <GatsbyImage image={img} alt={name} />
+    <Link
+      className="dj-card"
+      to={`/${slugify(name, { lower: true }).replace("'", '-')}`}
+    >
+      <GatsbyImage image={img} alt={name} />
+      <div className="overlay">
+        <h3>{name}</h3>
+        <span className="read-bio">Read Bio</span>
       </div>
     </Link>
   )

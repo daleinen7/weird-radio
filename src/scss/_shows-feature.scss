@@ -72,3 +72,46 @@
     }
   }
 }
+
+.explore-show {
+  .show-square {
+    background: $haze;
+    color: $black;
+
+    margin: 20px;
+    padding: 20px;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: $black;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    p.dj {
+      font-weight: 700;
+    }
+  }
+  .show-square-img {
+    border: 0 solid $haze;
+    border-radius: 23px;
+  }
+  .content-container {
+    position: relative;
+  }
+  .info {
+    position: absolute;
+    top: 0;
+    padding: 2.5rem;
+    background: transparentize($haze, 0.5);
+    width: 100%;
+    h3 {
+      color: black;
+    }
+  }
+}
