@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import TuneIn from '../components/TuneIn'
+import ExploreDjs from '../components/ExploreDJs'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
@@ -19,6 +21,8 @@ export default function Staff({ data }) {
           {renderRichText(staff.bio)}
         </div>
       </section>
+      <TuneIn />
+      <ExploreDjs />
     </Layout>
   )
 }
