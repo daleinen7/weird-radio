@@ -16,11 +16,12 @@
   p {
     color: $white;
   }
+
   p[role='doc-subtitle'] {
     text-transform: uppercase;
     color: white;
   }
-  
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -101,13 +102,14 @@
       font-weight: 700;
     }
   }
-  
+
   .show-square-img {
     border: 0 solid $haze;
     border-radius: 23px;
   }
 
   .content-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +118,7 @@
 
   .info {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     padding: 2.5rem;
     background: transparentize($haze, 0.5);
     width: 100%;
