@@ -118,7 +118,7 @@
     position: absolute;
     bottom: 20px;
     padding: 2.5rem;
-    background: rgba(243, 242, 242, 0.78);
+    background: transparentize($haze, 0.5);
     width: 100%;
     h3 {
       color: black;
