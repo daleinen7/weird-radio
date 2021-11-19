@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { Link } from 'gatsby'
 import play from '../images/play.svg'
 import pause from '../images/pause.svg'
 import volumeSymbol from '../images/volume.svg'
@@ -95,6 +96,11 @@ export default function MediaPlayer() {
             <div id="radioco_song"></div>
             {/* <div className="artist">Artist Playing</div> */}
           </div>
+        </div>
+        <div className="player-history">
+          <Link to="/history" activeClassName="active">
+            see recently played &#62;
+          </Link>
         </div>
       </div>
       <div className="controls">
