@@ -39,6 +39,37 @@
     font-weight: 400;
   }
 
+  .player-history {
+    position: absolute;
+    display: flex;
+    margin: 141.59px 16px 14.56px 24.97px;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+    
+    :first-child {
+      font-family: Helvetica Neue;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      color: $light-gray;
+      cursor: pointer;
+      padding-bottom: 3px;
+
+      &:hover {
+        border-bottom: 3px solid darken($purple, 17%);
+      }
+    }
+
+    .active {
+      border-bottom: 3px solid $purple;
+    }
+  }
+  
   .controls {
     display: flex;
     flex-direction: column;
