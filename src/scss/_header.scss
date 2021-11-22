@@ -62,18 +62,23 @@ header#main {
     ul {
       margin: 0;
       width: 100vw;
+      align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
 
     ul li:not(:first-child) {
       display: none;
     }
 
-    ul li:first-child a {
-      margin: 0;
+    ul li:first-child {
+      a {
+        margin: 0;
+      }
     }
 
     ul.nav-menu-open li:not(:first-child) {
+      display: inline;
       margin-bottom: 24px;
       a {
         padding: 4px;

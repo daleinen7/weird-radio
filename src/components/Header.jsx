@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../images/Logo.png'
+import smallLogo from '../images/smallLogo.svg'
 import MediaPlayer from './MediaPlayer'
 import { Link } from 'gatsby'
 import menuIcon from '../images/hamburgerMenu.svg'
@@ -28,7 +29,10 @@ export default function Header() {
           <ul className={navMenuOpen && 'nav-menu-open'}>
             <li className={logo}>
               <a href="/">
-                <img src={logo} alt="Weird Radio" />
+                <picture>
+                  <source media="min-width: 575px" srcSet={logo} />
+                  <img src={smallLogo} alt="Weird Radio" />
+                </picture>
               </a>
             </li>
             <li>
