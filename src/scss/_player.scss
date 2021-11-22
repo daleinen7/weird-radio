@@ -5,6 +5,12 @@
   height: 250px;
   z-index: 5;
 
+  @media (max-width: 575px) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
   .info {
     height: 168px;
     background-color: $charcoal;
