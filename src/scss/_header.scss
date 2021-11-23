@@ -1,5 +1,9 @@
 .spacer {
   height: 207px;
+
+  @media (max-width: 575px) {
+    height: 65px;
+  }
 }
 
 header#main {
@@ -55,7 +59,7 @@ header#main {
     nav button {
       display: inline;
       position: absolute;
-      top: calc(50% - 12px);
+      top: 22px;
       margin: 0 -24px 0 24px;
     }
 
@@ -71,7 +75,7 @@ header#main {
       display: none;
     }
 
-    ul li:first-child {
+    ul li {
       a {
         margin: 0;
       }

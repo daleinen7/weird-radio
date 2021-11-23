@@ -30,7 +30,7 @@ export default function Header() {
             <li className={logo}>
               <a href="/">
                 <picture>
-                  <source media="min-width: 575px" srcSet={logo} />
+                  <source media="(min-width: 575px)" srcSet={logo} />
                   <img src={smallLogo} alt="Weird Radio" />
                 </picture>
               </a>
