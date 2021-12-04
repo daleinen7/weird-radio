@@ -57,6 +57,33 @@
   }
 }
 
+.small-player {
+  height: 160px;
+
+  .info {
+    height: 100px;
+    background-color: $gray;
+  }
+
+  #radioco_artwork img {
+    height: 80px;
+    width: 80px;
+    margin: 14px 25px 37px 25px;
+  }
+
+  .now-playing {
+    display: none;
+  }
+
+  .weird-live {
+    display: none;
+  }
+
+  .controls {
+    height: 60px;
+  }
+}
+
 .song {
   font-size: 1.25rem;
   color: white;

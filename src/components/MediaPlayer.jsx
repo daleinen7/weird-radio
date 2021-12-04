@@ -12,7 +12,7 @@ const appendScript = (srcURL, selector) => {
   document.querySelector(selector).appendChild(script)
 }
 
-export default function MediaPlayer() {
+export default function MediaPlayer({ scrolled }) {
   const [radio, setRadio] = useState(false)
   const [volume, setVolume] = useState(6)
   const [audio] = useState(
@@ -83,7 +83,7 @@ export default function MediaPlayer() {
   }, [])
 
   return (
-    <div className="player">
+    <div className={scrolled ? 'player small-player' : 'player'}>
       <div className="info">
         <div id="radioco_artwork"></div>
         <div className="text">
