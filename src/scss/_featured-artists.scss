@@ -13,4 +13,21 @@
       min-height: 300px;
     }
   }
+  @media (max-width: 575px) {
+    padding: 0.5rem;
+
+    a {
+      width: 140px;
+    }
+
+    img,
+    li {
+      width: 100px;
+      height: 100px;
+    }
+
+    ul {
+      height: 200px;
+    }
+  }
 }
