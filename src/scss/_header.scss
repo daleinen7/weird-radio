@@ -1,5 +1,9 @@
 .spacer {
   height: 207px;
+
+  @media (max-width: 575px) {
+    height: 65px;
+  }
 }
 
 header#main {
@@ -12,6 +16,10 @@ header#main {
   padding: 0 10%;
   z-index: 4;
 
+  nav {
+    display: flex;
+  }
+
   ul {
     display: flex;
     justify-content: space-between;
@@ -19,8 +27,10 @@ header#main {
     margin-top: 50px;
   }
 
-  .logo {
-    padding-top: 30px;
+  nav button {
+    display: none;
+    background-color: transparent;
+    border: none;
   }
 
   nav a {
@@ -31,12 +41,54 @@ header#main {
     text-decoration: none;
     margin-right: 40px;
   }
+
   ul li:not(:first-child) {
     margin-bottom: 24px;
     a {
       padding: 4px;
       &:hover {
         border-bottom: 3px solid darken($purple, 17%);
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    height: auto;
+    padding: 0;
+
+    nav button {
+      display: inline;
+      position: absolute;
+      top: 22px;
+      margin: 0 -24px 0 24px;
+    }
+
+    ul {
+      margin: 0;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    ul li:not(:first-child) {
+      display: none;
+    }
+
+    ul li {
+      a {
+        margin: 0;
+      }
+    }
+
+    ul.nav-menu-open li:not(:first-child) {
+      display: inline;
+      margin-bottom: 24px;
+      a {
+        padding: 4px;
+        &:hover {
+          border-bottom: 3px solid darken($purple, 17%);
+        }
       }
     }
   }
