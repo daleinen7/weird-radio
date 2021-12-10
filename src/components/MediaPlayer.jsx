@@ -103,7 +103,7 @@ export default function MediaPlayer({ scrolled }) {
         </button>
         <div className="volumeControl">
           <label htmlFor="volume">
-            <img src={volumeSymbol} alt="" />
+            <img src={volumeSymbol} alt="volume symbol" />
           </label>
           <input
             className="styled-slider slider-progress"

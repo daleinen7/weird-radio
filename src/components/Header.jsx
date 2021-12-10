@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../images/Logo.png'
 import MediaPlayer from './MediaPlayer'
 import { Link } from 'gatsby'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
-  const changeHeader = () => {
-    window.scrollY >= 200 ? setScrolled(true) : setScrolled(false)
-  }
 
-  window.addEventListener('scroll', changeHeader)
+  useEffect(() => {
+    const isWindow = typeof window !== 'undefined'
+    const onScroll = () => {
+      isWindow &&
+        (window.scrollY >= 200 ? setScrolled(true) : setScrolled(false))
+    }
+    window.addEventListener('scroll', onScroll)
+  })
 
   return (
     <>
