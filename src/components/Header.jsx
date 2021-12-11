@@ -16,10 +16,9 @@ export default function Header() {
   useEffect(() => {
     const isWindow = typeof window !== 'undefined'
     const onScroll = () => {
-      isWindow &&
-        (window.scrollY >= 200 ? setScrolled(true) : setScrolled(false))
+      window.scrollY >= 200 ? setScrolled(true) : setScrolled(false)
     }
-    window.addEventListener('scroll', onScroll)
+    isWindow && window.addEventListener('scroll', onScroll)
   })
 
   return (
