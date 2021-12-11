@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../images/Logo.png'
 import smallLogo from '../images/smallLogo.svg'
 import MediaPlayer from './MediaPlayer'
@@ -7,15 +7,30 @@ import menuIcon from '../images/hamburgerMenu.svg'
 
 export default function Header() {
   const [navMenuOpen, setNavMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   const handleNavMenu = () => {
     setNavMenuOpen(!navMenuOpen)
   }
 
+  useEffect(() => {
+    const isWindow = typeof window !== 'undefined'
+    const onScroll = () => {
+      window.scrollY >= 200 ? setScrolled(true) : setScrolled(false)
+    }
+    isWindow && window.addEventListener('scroll', onScroll)
+  })
+
   return (
     <>
-      <div className="spacer"></div>
-      <header id="main">
+      <div
+        className="spacer"
+        style={scrolled ? { height: '144px' } : { height: '207px' }}
+      ></div>
+      <header
+        id="main"
+        style={scrolled ? { height: '144px' } : { height: '207px' }}
+      >
         <nav>
           <button
             area-label={navMenuOpen ? 'close menu' : 'open menu'}
@@ -26,7 +41,10 @@ export default function Header() {
               alt={navMenuOpen ? 'close menu' : 'open menu'}
             />
           </button>
-          <ul className={navMenuOpen && 'nav-menu-open'}>
+          <ul
+            className={navMenuOpen && 'nav-menu-open'}
+            style={scrolled ? { marginTop: '0' } : { marginTop: '50px' }}
+          >
             <li className={logo}>
               <a href="/">
                 <picture>
@@ -52,7 +70,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <MediaPlayer />
+        <MediaPlayer scrolled={scrolled} />
       </header>
     </>
   )
